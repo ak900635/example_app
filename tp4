@@ -1,0 +1,277 @@
+irb(main):051:1> s.split.to_a.shuffle
+irb(main):052:1> end
+=> nil
+irb(main):053:0> string_shuffle("foobar")
+=> ["foobar"]
+irb(main):054:0> def string_shuffle(s)
+irb(main):055:1> s.split.shuffle.to_a
+irb(main):056:1> end
+=> nil
+irb(main):057:0> string_shuffle("foobar")
+=> ["foobar"]
+irb(main):058:0> string_shuffle("foobar")
+=> ["foobar"]
+irb(main):059:0> string_shuffle("foobar")
+=> ["foobar"]
+irb(main):060:0> string_shuffle(foobar)
+NameError: undefined local variable or method `foobar' for main:Object
+	from (irb):60
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):061:0> def string_shuffle(s)
+irb(main):062:1> (s).split.shuffle.to_a.join('  , ')
+irb(main):063:1> end
+=> nil
+irb(main):064:0> string_shuffle(foobar)
+NameError: undefined local variable or method `foobar' for main:Object
+	from (irb):64
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):065:0> string_shuffle("foobar")
+=> "foobar"
+irb(main):066:0> def string_shuffle(s)
+irb(main):067:1> (s).split.to_a.join(' , ').shuffle
+irb(main):068:1> end
+=> nil
+irb(main):069:0> string_shuffle("foobar")
+NoMethodError: undefined method `shuffle' for "foobar":String
+	from (irb):67:in `string_shuffle'
+	from (irb):69
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):070:0> def string_shuffle(s)
+irb(main):071:1> (s).split.to_a.shuffle.join(' , ')
+irb(main):072:1> end
+=> nil
+irb(main):073:0> string_shuffle("foobar")
+=> "foobar"
+irb(main):074:0> def string_shuffle(s)
+irb(main):075:1> (s).split(" ,").to_a.shuffle
+irb(main):076:1> end
+=> nil
+irb(main):077:0> string_shuffle("foobar")
+=> ["foobar"]
+irb(main):078:0> def string_shuffle(s)
+irb(main):079:1> (s).shuffle.to_a
+irb(main):080:1> end
+=> nil
+irb(main):081:0> string_shuffle("foobar")
+NoMethodError: undefined method `shuffle' for "foobar":String
+	from (irb):79:in `string_shuffle'
+	from (irb):81
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):082:0> def string_shuffle(s)
+irb(main):083:1> (s).split(' ').shuffle.to_a
+irb(main):084:1> end
+=> nil
+irb(main):085:0> string_shuffle("foobar")
+=> ["foobar"]
+irb(main):086:0> def string_shuffle(s)
+irb(main):087:1> (s).split(' ').shuffle.join.to_a
+irb(main):088:1> end
+=> nil
+irb(main):089:0> string_shuffle("foobar")
+NoMethodError: undefined method `to_a' for "foobar":String
+	from (irb):87:in `string_shuffle'
+	from (irb):89
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):090:0> def string_shuffle(s)
+irb(main):091:1> "s".split.shuffle.join(',')
+irb(main):092:1> end
+=> nil
+irb(main):093:0> string_shuffle("foobar")
+=> "s"
+irb(main):094:0> def string_shuffle(s)
+irb(main):095:1> s.split.shuffle.join(',')
+irb(main):096:1> end
+=> nil
+irb(main):097:0> string_shuffle("foobar")
+=> "foobar"
+irb(main):098:0> def string_shuffle(s)
+irb(main):099:1> s.split.shuffle.join
+irb(main):100:1> end
+=> nil
+irb(main):101:0> string_shuffle("foobar")
+=> "foobar"
+irb(main):102:0> def string_shuffle(s)
+irb(main):103:1> ()s.to_a
+irb(main):104:1> end
+SyntaxError: (irb):103: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+()s.to_a
+   ^
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):105:0> def string_shuffle(s)
+irb(main):106:1> (s).to_a
+irb(main):107:1> end
+=> nil
+irb(main):108:0> string_shuffle("foobar")
+NoMethodError: undefined method `to_a' for "foobar":String
+	from (irb):106:in `string_shuffle'
+	from (irb):108
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):109:0> def string_shuffle(s)
+irb(main):110:1> 's'.to_a
+irb(main):111:1> end
+=> nil
+irb(main):112:0> string_shuffle("foobar")
+NoMethodError: undefined method `to_a' for "s":String
+	from (irb):110:in `string_shuffle'
+	from (irb):112
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):113:0> s="shuffle"
+=> "shuffle"
+irb(main):114:0> s.class
+=> String
+irb(main):115:0> s=String.new("shuffle")
+=> "shuffle"
+irb(main):116:0> s.class
+=> String
+irb(main):117:0> s=="shuffle"
+=> true
+irb(main):118:0> s.class.superclass
+=> Object
+irb(main):119:0> s.class.superclass.superclass
+=> BasicObject
+irb(main):120:0> s.class.superclass.superclass.superclass
+=> nil
+irb(main):121:0> class String
+irb(main):122:1> def shuffle(string)
+irb(main):123:2> string.split('').shuffle.join
+irb(main):124:2> end
+irb(main):125:1> end
+=> nil
+irb(main):126:0> shuffle("foobar"
+irb(main):127:1> )
+NoMethodError: undefined method `shuffle' for main:Object
+	from (irb):126
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):128:0> shuffle("foobar")
+NoMethodError: undefined method `shuffle' for main:Object
+	from (irb):128
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):129:0> shuffle
+NameError: undefined local variable or method `shuffle' for main:Object
+	from (irb):129
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):130:0> s=Word.new("foobar")
+NameError: uninitialized constant Word
+	from (irb):130
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):131:0> s = Word.new("foobar")
+NameError: uninitialized constant Word
+	from (irb):131
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):132:0> git commit -m "tp4"
+SyntaxError: (irb):132: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+git commit -m "tp4"
+               ^
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):133:0> shuffle("foobar")
+NoMethodError: undefined method `shuffle' for main:Object
+	from (irb):133
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:90:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands/console.rb:9:in `start'
+	from /home/karim/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/railties-4.0.2/lib/rails/commands.rb:62:in `<top (required)>'
+	from bin/rails:4:in `require'
+	from bin/rails:4:in `<main>'
+irb(main):134:0> class String
+irb(main):135:1>     def shuffle?(s)
+irb(main):136:2>       s.split('').shuffle.join
+irb(main):137:2>  end
+irb(main):138:1> end
+=> nil
+irb(main):139:0> c = String.new
+=> ""
+irb(main):140:0> c.shuffle("foobar")
+=> "abroof"
+irb(main):141:0> c.shuffle("foobar")
+=> "oobraf"
+irb(main):142:0> person1={}
+=> {}
+irb(main):143:0> person1={:prenom=>"p1", :nom=>"n1"}
+=> {:prenom=>"p1", :nom=>"n1"}
+irb(main):144:0> person2={:prenom=>"p2", :nom=>"n2"}
+=> {:prenom=>"p2", :nom=>"n2"}
+irb(main):145:0> person3={:prenom=>"p3", :nom=>"n3"}
+=> {:prenom=>"p3", :nom=>"n3"}
+irb(main):146:0> #person3
+irb(main):147:0* person3[:prenom]
+=> "p3"
+irb(main):148:0> person1[:prenom]
+=> "p1"
+irb(main):149:0> person2[:prenom]
+=> "p2"
+irb(main):150:0> person2[:nom]
+=> "n2"
+irb(main):151:0> params={}
+=> {}
+irb(main):152:0> params[:pere]=person1
+=> {:prenom=>"p1", :nom=>"n1"}
+irb(main):153:0> params[:mere]=person2
+=> {:prenom=>"p2", :nom=>"n2"}
+irb(main):154:0> params[:fils]=person3
+=> {:prenom=>"p3", :nom=>"n3"}
+irb(main):155:0> params[:pere] [:first]
+=> nil
+irb(main):156:0> params[:pere] [:prenom]
+=> "p1"
+irb(main):157:0> params[:pere] [:nom]
+=> "n1"
+irb(main):158:0> params[:mere] [:nom]
+=> "n2"
+irb(main):159:0> params[:fils] [:nom]
+=> "n3"
+
