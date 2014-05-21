@@ -1,38 +1,44 @@
 require 'spec_helper'
-subject{ page }
-describe "Home page" do
-	    before { visit root_path } 
-
-	    it { should have_selector('h1', text: 'Sample App') }
-	    it { should have_selector 'title',
-	                        text: "Ruby on Rails Tutorial Sample App" }
-	    it { should_not have_selector 'title', text: '| Home' }
+describe "User pages" do
+describe "profile page" do
+  let(:user) { FactoryGirl.create(:user)}  
+            before { visit user_path (user)}
+	    it { should have_selector('h1', text: user.name) }
+	    it { should have_selector 'Profile',
+                   text: user.name }
 	  end
-describe "Help page" do
-	    before { visit help_path } 
+describe "Static pages" do
 
-	    it { should have_selector('h1', text: 'Sample App') }
-	    it { should have_selector 'title',
-	                        text: "Ruby on Rails Tutorial Sample App" }
-	    it { should_not have_selector 'title', text: '| Help' }
-	  end
+  subject { page }
 
-describe "About page" do
- before { visit about_path } 
+  describe "Home page" do
+    before { visit root_path }
 
-	    it { should have_selector('h1', text: 'Sample App') }
-	    it { should have_selector 'title',
-	                        text: "Ruby on Rails Tutorial Sample App" }
-	    it { should_not have_selector 'title', text: '| About' }
-		end
+    it { should have_content('Sample App') }
+    it { should have_title(full_title('')) }
+    it { should_not have_title('| Home') }
+  end
 
-describe "Contact page" do
-   before { visit contact_path } 
+  describe "Help page" do
+    before { visit help_path }
 
-	    it { should have_selector('h1', text: 'Sample App') }
-	    it { should have_selector 'title',
-	                        text: "Ruby on Rails Tutorial Sample App" }
-	    it { should_not have_selector 'title', text: '| Contact' }
-	  end
+    it { should have_content('Help') }
+    it { should have_title(full_title('Help')) }
+  end
+
+  describe "About page" do
+    before { visit about_path }
+
+    it { should have_content('About') }
+    it { should have_title(full_title('About Us')) }
+  end
+
+  describe "Contact page" do
+    before { visit contact_path }
+
+    it { should have_content('Contact') }
+    it { should have_title(full_title('Contact')) }
+  end
+end
 end
 

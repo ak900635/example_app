@@ -33,6 +33,7 @@ gem 'jquery-rails'
 
 group :test do
    gem 'capybara', '1.1.2'
+   gem 'factory_girl_rails','4.1.0'
 end
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -47,7 +48,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+ gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
