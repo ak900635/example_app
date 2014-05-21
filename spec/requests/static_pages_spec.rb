@@ -1,22 +1,38 @@
 require 'spec_helper'
-
+subject{ page }
 describe "Home page" do
-    it "should have the content 'Example App'" do
-      visit '/static_pages/home'
-      page.should have_content('Example App')
-    end
-  end
+	    before { visit root_path } 
 
+	    it { should have_selector('h1', text: 'Sample App') }
+	    it { should have_selector 'title',
+	                        text: "Ruby on Rails Tutorial Sample App" }
+	    it { should_not have_selector 'title', text: '| Home' }
+	  end
 describe "Help page" do
-  it "should have the content 'Help'" do
-    visit '/static_pages/help'
-    page.should have_content('Help')
-  end
-end
+	    before { visit help_path } 
+
+	    it { should have_selector('h1', text: 'Sample App') }
+	    it { should have_selector 'title',
+	                        text: "Ruby on Rails Tutorial Sample App" }
+	    it { should_not have_selector 'title', text: '| Help' }
+	  end
 
 describe "About page" do
-  it "should have the content 'About'" do
-    visit '/static_pages/about'
-    page.should have_content('About')
-  end
+ before { visit about_path } 
+
+	    it { should have_selector('h1', text: 'Sample App') }
+	    it { should have_selector 'title',
+	                        text: "Ruby on Rails Tutorial Sample App" }
+	    it { should_not have_selector 'title', text: '| About' }
+		end
+
+describe "Contact page" do
+   before { visit contact_path } 
+
+	    it { should have_selector('h1', text: 'Sample App') }
+	    it { should have_selector 'title',
+	                        text: "Ruby on Rails Tutorial Sample App" }
+	    it { should_not have_selector 'title', text: '| Contact' }
+	  end
 end
+
