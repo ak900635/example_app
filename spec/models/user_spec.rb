@@ -46,7 +46,7 @@ describe "return value of authenticate method" do
  describe "with invalid password" do
    let (:user_for_invalid_password) {found_user.authenticate("invalid")}
     it{ should_not == user_for_invalid_password}
-    specify { user_for_invalid_password.should be_flase}
+    specify { user_for_invalid_password.should be_false}
   end
  describe "with a password tht's too short " do
    before { @user.password = @user.password_confirmation= "a" * 5 }
@@ -78,9 +78,8 @@ describe "return value of authenticate method" do
     before do
       user_with_same_email = @user.dup
       user_with_same_email.save
-    end
-
-    it { should_not be_valid }
+     it { should_not be_valid }
+   end
   end
 end
 end
